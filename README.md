@@ -109,7 +109,7 @@ BlogCreate/
 ### Clone Repository
 
 ```bash
-git clone https://github.com/Sanchit-Agalave27/BlogCreate.git
+git clone https://github.com/Piyush2825/BlogCreate.git
 cd BlogCreate
 ```
 
@@ -256,10 +256,10 @@ This project demonstrates:
 **Sanchit Agalave**
 
 GitHub:
-https://github.com/Sanchit-Agalave27
+https://github.com/Piyush2825
 
 Project Repository:
-https://github.com/Sanchit-Agalave27/BlogCreate
+https://github.com/Piyush2825/BlogCreate
 
 Live Demo:
 https://blogcreate-cv3k.onrender.com
