@@ -259,7 +259,7 @@ GitHub:
 https://github.com/Piyush2825
 
 Project Repository:
-https://github.com/Piyush2825/BlogCreate
+https://github.com/Piyush2825/Blog-Create
 
 Live Demo:
 https://blogcreate-cv3k.onrender.com
