@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+
+    <h1>
+        Stories Worth Sharing
+    </h1>
+
+    <p>
+        Create beautiful blogs with images and rich content.
+    </p>
+
+</section>
+
+<form method="GET"
+      class="search-form">
+
+    <input
+        type="text"
+        name="search"
+        value="{{ search }}"
+        placeholder="Search blogs by title">
+
+    <button type="submit">
+        Search
+    </button>
+
+</form>
+
+<div class="blog-grid">
+
+{% for blog in blogs %}
+
+<div class="blog-card">
+
+    {% if blog.image_path %}
+
+    <img
+        src="/uploads/{{ blog.image_path }}"
+        class="blog-image">
+
+    {% endif %}
+
+    <h2>
+        {{ blog.title }}
+    </h2>
+
+    <div class="author">
+
+        ✍️ {{ blog.author }}
+
+    </div>
+
+    <div class="date">
+
+        {{ blog.created_at.strftime("%d %b %Y") }}
+
+    </div>
+
+    <p>
+
+        {{ blog.content[:150] }}...
+
+    </p>
+
+    <div class="card-actions">
+
+        <a href="/blog/{{ blog.id }}"
+           class="read-btn">
+
+            Read
+
+        </a>
+
+        <a href="/edit/{{ blog.id }}"
+           class="edit-btn">
+
+            Edit
+
+        </a>
+
+        <a href="/delete/{{ blog.id }}"
+           class="delete-btn">
+
+            Delete
+
+        </a>
+
+    </div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+<div class="pagination">
+
+    {% if page > 1 %}
+
+    <a href="/?search={{ search }}&page={{ page-1 }}">
+        Previous
+    </a>
+
+    {% endif %}
+
+    <span>
+        Page {{ page }} of {{ pages }}
+    </span>
+
+    {% if page < pages %}
+
+    <a href="/?search={{ search }}&page={{ page+1 }}">
+        Next
+    </a>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}
